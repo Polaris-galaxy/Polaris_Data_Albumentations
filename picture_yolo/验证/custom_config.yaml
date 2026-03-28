@@ -1,0 +1,35 @@
+# custom_config.yaml（适配自定义权重）
+model:
+  type: deformable_detr
+  backbone:
+    type: resnet50  # 训练时用的骨干网络（如 resnet18、resnet50）
+    pretrained: true
+    norm_layer: FrozenBatchNorm2d
+    style: pytorch
+  d_model: 256  # 训练时的 Transformer 维度
+  num_queries: 300  # 训练时的最大检测目标数
+  num_classes: 3  # 你的类别数（必须和 CLASS_NAMES 长度一致！）
+  num_encoder_layers: 6
+  num_decoder_layers: 6
+  dim_feedforward: 1024
+  dropout: 0.1
+  activation: relu
+  return_intermediate_dec: true
+  num_heads: 8
+  dec_n_points: 4
+  enc_n_points: 4
+  two_stage: false  # 训练时是否启用两阶段
+  with_box_refine: false  # 训练时是否细化检测框
+  transformer:
+    in_channels: [256, 512, 1024, 2048]
+    featmaps: [16, 8, 4, 2]
+
+data:
+  img_scale: (640, 480)  # 训练时的输入尺寸（和脚本预处理一致）
+  normalize:
+    mean: [0.485, 0.456, 0.406]  # 训练时的归一化均值
+    std: [0.229, 0.224, 0.225]   # 训练时的归一化方差
+
+test:
+  score_threshold: 0.05
+  nms_threshold: 0.5
