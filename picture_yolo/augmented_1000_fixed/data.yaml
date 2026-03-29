@@ -1,2 +1,0 @@
-nc: 1               # 类别数量（可选，脚本以names长度为准）
-names: ['yangmao']  # 类别名称（顺序对应class_id 0/1/2）
