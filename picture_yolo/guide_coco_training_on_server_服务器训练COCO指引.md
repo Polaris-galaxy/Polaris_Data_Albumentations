@@ -98,9 +98,9 @@ python main.py \
 
 ## 1.数据增强验证
 
-使用 diagnose_structure(使用后判断诊断路径).py 寻找验证目录
+使用 `diagnose_dataset_folder_structure_数据集目录诊断.py` 寻找/核对验证目录
 
-再使用 label_checker(诊断数据增强是否成功).py 验证
+再使用 `yolo_label_visual_checker_YOLO标注可视化检查.py` 验证增强与标注
 
 ## 2.数据增强后类别显示0.0浮点数导致无法验证
 
@@ -108,13 +108,13 @@ python main.py \
 
 ## 3.yolo 转 coco 数据集后在服务器端显示路径错误
 
-在服务器端复制使用 AutoDL_coco_fix.py 修复
+在服务器端复制使用 `coco_json_fix_image_paths_for_server_COCO路径修正服务器.py` 修复
 
 ## 4.训练时显示 _NewEmptyTensorOp 报错
 
 说明之前修改的 torchvision 失败建议修改 misc.py 文件
 
-可以复制粘贴 misc_fix.py 代替即可使用（修改后需要重新编译cuda算子）
+若需兼容旧版 torchvision，请在 Deformable-DETR 仓库内直接修改官方 `util/misc.py`（或对照 DETR 官方仓库历史版本中的 `misc.py` 中 `_NewEmptyTensorOp` / `interpolate` 等实现自行合并）；修改后需要重新编译 cuda 算子。
 
 1. 清除旧的编译结果
 ```bash

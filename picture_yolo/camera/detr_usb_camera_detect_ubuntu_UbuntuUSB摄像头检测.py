@@ -537,4 +537,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-#python3 ubuntu_deformable_detr_camera.py --model_path /path/to/your/model.pth --camera_type usb --camera_device /dev/video0 --confidence 0.5
+# python3 detr_usb_camera_detect_ubuntu_UbuntuUSB摄像头检测.py --model_path /path/to/your/model.pth --camera_type usb --camera_device /dev/video0 --confidence 0.5

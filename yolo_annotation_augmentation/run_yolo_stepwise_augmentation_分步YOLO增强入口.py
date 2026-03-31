@@ -1,7 +1,7 @@
 import cv2
 import os
 from pathlib import Path
-from yolo_augmentation import YOLOAugmentor, MosaicAugmentor, MixUpAugmentor
+from yolo_augmentation_library_增强核心库 import YOLOAugmentor, MosaicAugmentor, MixUpAugmentor
 
 def step_by_step_augmentation():
     """分步进行数据增强，提供更精细的控制"""

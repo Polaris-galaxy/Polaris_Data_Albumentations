@@ -1,5 +1,8 @@
 # 🚀快速开始
 
+> 说明：各脚本文件名在英文标识后带有 `_中文说明`，便于从资源管理器或终端一眼看出用途；运行命令时请使用**完整文件名**（含中文部分）。
+
+
 # 图片类型数据增强
 
 ## 🌟使用说明
@@ -44,7 +47,7 @@
 
 # yolo数据集增强及验证
 
-## 支持效果（运行step_by_step_augment.py）
+## 支持效果（运行 `yolo_annotation_augmentation/run_yolo_stepwise_augmentation_分步YOLO增强入口.py`）
 
 ✅ 支持YOLO格式数据集
 
@@ -60,18 +63,18 @@
 
 ✅ 灵活的参数配置
 
-## 验证（运行verify_augmentation(test).py）
+## 验证（运行 `yolo_annotation_augmentation/verify_yolo_augmentation_matplotlib_增强效果可视化验证.py`）
 
 # 少数图片标注直接生成大量增强数据集
 
 ## 🚀使用说明
 
-使用 simple_debug.py 先进训练前检测
+使用 `picture_yolo/yolo_images_labels_preflight_check_训练前图与标签检查.py` 做训练前数据预检
 
-使用修复后的代码 fixed_augmentation.py 开始进行数据增强
+使用 `picture_yolo/yolo_albumentations_augment_to_target_YOLO增强至目标张数.py` 进行 YOLO 目标张数增强流水线
 
-使用路径及检测工具检测增强是否合理
+使用路径诊断与标注可视化工具检查增强是否合理（见 `picture_yolo/diagnose_dataset_folder_structure_数据集目录诊断.py`、`picture_yolo/yolo_label_visual_checker_YOLO标注可视化检查.py`）
 
-在使用转化脚本将yolo格式的数据集转化为coco数据集
+使用 `picture_yolo/convert_yolo_dataset_to_coco_YOLO转COCO格式.py` 将 YOLO 数据集转为 COCO
 
-（AutoDL_coco_fix.py）用于服务器训练时在linux下路径问题，使用时按照代码酌情修改即可。
+`picture_yolo/coco_json_fix_image_paths_for_server_COCO路径修正服务器.py` 用于服务器（Linux）训练时修正 COCO 中图片路径，按实际路径修改配置后运行即可。

@@ -389,4 +389,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-#python deformable_detr_camera.py --model_path C:\Users\31447\Deformable-DETR\结果文件\final_model.pth --camera_id 0 --confidence 0.5
+# python detr_opencv_camera_detect_OpenCV摄像头检测.py --model_path C:\Users\31447\Deformable-DETR\结果文件\final_model.pth --camera_id 0 --confidence 0.5

@@ -1,19 +1,19 @@
 # Data_Albumentations — 全仓库 pip 依赖汇总
 #
-# 非 pip：`picture_yolo/class_float_fix.py` 使用 Blender 内置模块 `bpy`，需在 Blender 中运行，勿在此安装。
+# 若有 Blender 插件脚本，其使用内置模块 `bpy`，勿在此安装。
 #
 # PyTorch：若需 CUDA，请从 https://pytorch.org 按本机环境选择安装命令（可只装 CPU 版）。
 
-# 通用：图像读写、增强、YOLO 标注（fixed_augmentation.py, yolo_augmentation.py, albumentations_use.py, video_data_get, label_checker 等）
+# 通用：图像读写、增强、YOLO 标注（文件名后缀 _中文 为作用说明；如 yolo_albumentations_augment_to_target_YOLO增强至目标张数.py 等）
 numpy>=1.24
 opencv-python>=4.9
 albumentations>=2.0
 Pillow>=10.0
 PyYAML>=6.0
 
-# PyTorch 生态：gpu_detect.py, misc_fix.py, camera/deformable_detr_camera.py 等
+# PyTorch 生态：deformable_detr_gpu_infer_file_camera_GPU视频与摄像头检测.py, camera/detr_opencv_camera_detect_OpenCV摄像头检测.py 等
 torch>=2.0
 torchvision>=0.15
 
-# 可视化：yolo_annotation_augmentation/verify_augmentation(test).py
+# 可视化：verify_yolo_augmentation_matplotlib_增强效果可视化验证.py
 matplotlib>=3.7
